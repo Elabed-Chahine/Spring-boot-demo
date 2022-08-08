@@ -31,4 +31,4 @@ jobs:
       - name: push
         if: ${{ steps.semver.outputs.released == 'true' }}
         run: |
-          Release Generated
+         echo  Release Generated
