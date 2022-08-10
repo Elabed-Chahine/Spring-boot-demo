@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - origin
-  pull_request:
-      types: [opened, synchronize, reopened]
+
 
 name: SonarQube Scan
 jobs:
@@ -19,7 +18,7 @@ jobs:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
     - name: SonarQube Scan
-      uses: kitabisa/sonarqube-action@v1.2.0
+      uses: kitabisa/sonarqube-action@master
       with:
-        host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
+        projectKey: "test"
