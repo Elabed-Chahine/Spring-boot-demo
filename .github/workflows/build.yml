@@ -30,4 +30,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: SonarQube Scan
         uses: kitabisa/sonarqube-action@v1.2.0
-    
+        with:
+         host: http://localhost:9000
+         login: ${{ secrets.SONARQUBE_TOKEN }}
