@@ -17,7 +17,7 @@ public class AutomaticReleaseNotesApplication {
 
 	@GetMapping("/demo")
 	public String demo(@RequestParam(value="name", defaultValue="world") String name){
-		return String.format("hello %s",name );
+		return String.format("hello there  %s",name );
 
 	}
 
